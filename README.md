@@ -6,16 +6,23 @@
 
 ## :information_source: About
 
-This is the source code for the [MatrixAnarchy Website](https://matrixanarchy.org)
+This is the source code for the [MatrixAnarchy Website](https://matrixanarchy.org). <br>
+Website made by [NullDev](https://github.com/NLDev).
 
 > Live Site: https://matrixanarchy.org <br>
 Development Site: https://epticmc.github.io/MatrixAnarchy/
 
 **Libraries:**
-- [MatrixJS by me](https://github.com/NLDev/matrixjs)
+- [MatrixJS by NullDev](https://github.com/NLDev/matrixjs)
 - [jQuery](https://jquery.com/)
 - [FontAwesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [ScrambleText](https://codepen.io/Onin42/pen/prxZKX)
+
+<hr>
+
+## :bar_chart: Lighthouse Stats
+
+<p align="center"><img height="auto" width="100%" src="https://cdn.discordapp.com/attachments/790314541770604585/792490616872370186/unknown.png" /></p>
 
 <hr>
