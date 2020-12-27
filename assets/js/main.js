@@ -5,20 +5,13 @@
 // ========================= //
 
 ($ => {
+    // Greeter
+    const ARG = ["color:blue;font-weight:bold;font-size:24px", "color:red;font-weight:bold;font-size:24px", "color:blue;font-weight:bold;font-size:24px", "color:green;font-weight:bold;font-size:24px"];
+    console.log("%cDEVELOPED WITH %c<3%c BY%c NULLDEV.ORG", ...ARG);
+
     fetch("https://api.mcsrvstat.us/2/matrixanarchy.org", { mode: "cors" })
         .then(res => res.json())
         .then(data => $("div.center-box > .inner span#stats").text(`${data.players.online} / ${data.players.max}`));
-
-    /**
-     * Initial loading
-     *
-     * @returns {*} end-func
-     */
-    let cLoad = function(){
-        const ARG = ["color:blue;font-weight:bold;font-size:24px", "color:red;font-weight:bold;font-size:24px", "color:blue;font-weight:bold;font-size:24px", "color:green;font-weight:bold;font-size:24px"];
-        console.log(window.atob("JWNERVZFTE9QRUQgV0lUSCAlYzwzJWMgQlklYyBOVUxMREVWLk9SRw=="), ...ARG);
-        return $("body").append(window.atob("PGRpdiBjbGFzcz0iY3JlZGl0cyI+V2Vic2l0ZSBieSA8YSBocmVmPSJodHRwczovL251bGxkZXYub3JnIiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciI+TnVsbERldjwvYT48L2Rpdj4="));
-    };
 
     /**
      * Initial animation workers
@@ -58,7 +51,7 @@
         cLoad();
         init(); // Matrix -> ./vendor/matrix.min.js
         workers();
-        glitchText("MatrixAnarchy");
+        glitchText("MatrixAnarchy"); // GlitchText -> ./vendor/glitchify.min.js
         $("#rm, #back").on("click", readMore);
     });
 
