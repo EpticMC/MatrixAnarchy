@@ -48,7 +48,6 @@
     };
 
     $(document).ready(() => {
-        cLoad();
         init(); // Matrix -> ./vendor/matrix.min.js
         workers();
         glitchText("MatrixAnarchy"); // GlitchText -> ./vendor/glitchify.min.js
