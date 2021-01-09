@@ -28,6 +28,7 @@
      * @param {String} str
      */
     let glitchText = async function(str){
+        // @ts-ignore
         const fx = new TextScramble(document.querySelector("h1"));
         let next = () => fx.setText(str).then(() => setTimeout(next, 1500));
         next();
@@ -41,19 +42,33 @@
      */
     let readMore = function(e){
         // @ts-ignore
-        let tar = e.target.id === "rm" ? [1, 2] : [2, 1];
-        $(".inner-content-" + tar[0]).fadeOut(1000, () => {
-            $(".inner-content-" + tar[1]).fadeIn(1000);
-        });
+        switch (e.target.id){
+            case "rm": {
+                return $(".inner-content-1").fadeOut(1000, () => {
+                    $(".inner-content-2").fadeIn(1000);
+                });
+            }
+            case "pr": {
+                return $(".inner-content-1").fadeOut(1000, () => {
+                    $(".inner-content-3").fadeIn(1000);
+                });
+            }
+            default: {
+                $(".inner-content-2, .inner-content-3").fadeOut(1000);
+                return $(".inner-content-2, .inner-content-3").promise().done(() => $(".inner-content-1").fadeIn(1000));
+            }
+        }
     };
 
     $(document).ready(() => {
+        // @ts-ignore
         init(); // Matrix -> ./vendor/matrix.min.js
         workers();
         glitchText("MatrixAnarchy"); // GlitchText -> ./vendor/glitchify.min.js
-        $("#rm, #back").on("click", readMore);
+        $("#rm, .back, #pr").on("click", readMore);
     });
 
+    // @ts-ignore
     window.addEventListener("resize", () => init());
 
 // @ts-ignore
