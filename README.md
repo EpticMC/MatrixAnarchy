@@ -7,13 +7,13 @@
 ## :information_source: About
 
 This is the source code for the [MatrixAnarchy Website](https://matrixanarchy.org). <br>
-Website made by [NullDev](https://github.com/NLDev).
+Website made by [NullDev](https://github.com/NullDev).
 
 > Live Site: https://matrixanarchy.org <br>
 Development Site: https://epticmc.github.io/MatrixAnarchy/
 
 **Libraries:**
-- [MatrixJS by NullDev](https://github.com/NLDev/matrixjs)
+- [MatrixJS by NullDev](https://github.com/NullDev/matrixjs)
 - [jQuery](https://jquery.com/)
 - [FontAwesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
